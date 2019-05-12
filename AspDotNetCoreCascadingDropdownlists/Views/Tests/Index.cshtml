@@ -1,0 +1,34 @@
+﻿@model SelectProductViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<form asp-action="Index">
+    <div class="form-group">
+        <div class="row">
+            <label asp-for="Categories" class="control-label col-md-2"></label>
+            <select class="col-md-10" id="Categories" asp-for="CategoryId" , asp-items="Model.Categories"></select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <label asp-for="SubCategories" class="control-label col-md-2"></label>
+            <select class="col-md-10" id="SubCategories" asp-for="SubCategoryId" asp-items="Model.SubCategories"></select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <label asp-for="Products" class="control-label col-md-2"></label>
+            <select class="col-md-10" id="Products" asp-for="ProductId" , asp-items="Model.Products"></select>
+        </div>
+    </div>
+</form>
+
+@section  Scripts{ 
+    <script src="~/js/tests.index.js"></script>
+}
